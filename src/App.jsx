@@ -22,7 +22,7 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const [movieList, setMovieList] = useState([]);
-  const [errorMassage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -121,8 +121,8 @@ const App = () => {
 
           {isLoading ? (
             <Spinner />
-          ) : errorMassage ? (
-            <p className="text-red-500">{errorMassage}</p>
+          ) : errorMessage ? (
+            <p className="text-red-500">{errorMessage}</p>
           ) : (
             <ul>
               {movieList.map((movie) => (
